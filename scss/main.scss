@@ -54,7 +54,8 @@ body {
         padding: 0 15px;
     }
     @media screen and (max-width: 576px) {
-        padding: 0 10px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 
@@ -181,15 +182,22 @@ body {
     }
     @media screen and (max-width: 992px) {
         display: flex;
-        justify-content: center;
+        
+    }
+    @media screen and (max-width: 664px) {
+            
     }
 }
+
+
 
 .information_section {
     display: flex;
         align-items: center;
         margin-top: 180px;
-        
+        @media screen and (max-width: 1000px) {
+            justify-content: center;
+        }
     
     &__image {
         position: absolute;
@@ -246,6 +254,9 @@ body {
         }
         &__paragraph {
             margin-bottom: 0;
+            @media screen and (max-width: 511px) {
+                font-size: 16px;
+            }
         }
         &__button {
             display: flex;
@@ -273,6 +284,9 @@ body {
                 background-color: #E54F3A;
             }   
         }
+        @media screen and (max-width: 664px) {
+            width: 86%;
+        }
     }
 }
 
@@ -286,6 +300,10 @@ body {
         display: flex;
         gap: 10vw;
         padding-bottom: 90px;
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+    align-items: center;
+        }
     }
     &__item {
         width: 66%;
@@ -325,12 +343,16 @@ body {
     &__image {
         position: relative;
         display: inline-block;
+        &__size {
+            max-width: 100%;
+        }
         &__text {
             position: absolute;
             top: 50%;
             left: 42%;
             transform: translate(-50%, -50%);
             width: 60%;
+           
         }
         &__add {
             position: absolute;
@@ -338,6 +360,9 @@ body {
             left: 37%;
             transform: translate(-50%, -50%);
             width: 60%;
+            @media screen and (max-width: 786px) {
+               top: 36%;
+            }
         }
     }
     &__text {
@@ -346,6 +371,14 @@ body {
         letter-spacing: 0.04em;
         font-weight: 400;
         line-height: 46px;
+        @media screen and (max-width: 992px) {
+                font-size: 22px;
+                line-height: 20px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 12px;
+                line-height: 16px;
+        }
     }
     &__under {
         font-family: "Playfair Display", serif;
@@ -354,6 +387,10 @@ body {
         color: #fff;
         font-size: 20px;
         letter-spacing: 0.08em;
+        @media screen and (max-width: 576px) {
+            font-size: 18px;
+            line-height: 16px;
+    }
     }
 }
 
@@ -364,9 +401,25 @@ body {
     flex-wrap: wrap;
     padding-bottom: 120px;
     gap: 10px;
+    &__size {
+        @media screen and (max-width: 1240px) {
+            width: 90%;
+        height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
     &__container {
         width: 85%;
         height: 100%;
+        display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1240px) {
+        align-items: center;
+    }
+    
+        
     }
     &__title {
         font-family: "Playfair Display", serif;
@@ -377,11 +430,15 @@ body {
         font-weight: 300;
     }
     &__box {
-        width: 970px;
+        width: 100%;
         height: 600px;
         border: #E4E4E4 1px solid;
         border-radius: 32px;
         position: relative;
+        @media screen and (max-width: 1240px) {
+            width: 430px;
+            height: 600px;
+        }
         &__button {
             width: 35px;
             height: 35px;
@@ -391,6 +448,15 @@ body {
             top: 50%;
             left: 97%;
             transform: translate(-50%, -50%);
+            @media screen and (max-width: 1240px) {
+                width: 35px;
+            height: 35px;
+            border: #E4E4E4 1px solid;
+            border-radius: 32px;
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            }
         }
         &__camera {
             width: 13px;
@@ -401,6 +467,16 @@ body {
             top: 50%;
             left: 1.5%;
             transform: translate(-50%, -50%);
+            @media screen and (max-width: 1240px) {
+                width: 50px;
+                height: 13px;
+                border: #E4E4E4 1px solid;
+                border-radius: 32px;
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         &__play_button {
@@ -418,25 +494,58 @@ body {
         top: 50%;
         left: 48%;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 576px) {
+            top: 50%;
+        left: 50%;
+        }
+        @media screen and (max-width: 992px) {
+            top: 50%;
+        left: 50%;
+        }
     }
 }
 
+.video_container__size {
+    @media screen and (max-width: 1240px) {
+        width: 488px;
+       
+        rotate: 90deg;
+    }
+    @media screen and (max-width: 992px) {
+        
+    }
+    @media screen and (max-width: 786px) {
+        
+    }
+    @media screen and (max-width: 576px) {
+       
+    }
+}
 .features_section__block_position {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+    @media screen and (max-width: 992px) {
+        justify-content: center;
+    }
 }
 
 .features_section {
     display: flex;
         align-items: center;
         margin-top: 90px;
+        @media screen and (max-width: 992px) {
+                justify-content: center;
+        }
         
     
     &__image {
         position: absolute;
         z-index: -1;
         display: flex;
+        &__size {
+            max-width: 100%;
+        }
     }
     &__block {
         background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
@@ -519,14 +628,21 @@ body {
                     background-color: #E54F3A;
                 }   
             }
+            
         }
-       
+        @media screen and (max-width: 992px) {
+            width: 90%;
+    }
     }
 }
 
 .reviews_section {
     padding-top: 150px;
-
+    @media screen and (max-width: 1240px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__main_title{
         font-family: "Playfair Display", serif;
             font-weight: 300;
@@ -551,6 +667,11 @@ body {
     &__wrapper {
         display: flex;
         gap: 1.6vw;
+        @media screen and (max-width: 1240px) {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6vw;
+        }
 
         &__title {
             font-family: "Playfair Display", serif;
@@ -593,7 +714,7 @@ body {
 .form_section {
 
     margin-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 320px;
     
      
 &__button {
@@ -623,6 +744,13 @@ body {
             &:hover::after {
                 background-color: #E54F3A;
             }
+            @media screen and (max-width: 1240px) {
+                left: -180px;
+        }
+            @media screen and (max-width: 992px) {
+                left: -138px;
+                top: 155px;
+        }
 }
     &__flex {
         display: flex;
@@ -637,6 +765,9 @@ body {
             height: 1px;
             top: -55px;  
         } 
+        @media screen and (max-width: 571px) {
+            white-space: nowrap;
+        }
     }
 
     &__container {
@@ -662,6 +793,11 @@ body {
             font-weight: 300;
             opacity: 80%;
             line-height: 26px;
+            
+    @media screen and (max-width: 873px) {
+        position: absolute;
+    top: 100px;
+    }
     }
 
     &__form_container {
@@ -673,7 +809,16 @@ body {
     top: 75%;
     left: 80%;
     transform: translate(-50%, -50%);
+    @media screen and (max-width: 992px) {
+        top: 115px;
+}
+@media screen and (max-width: 873px) {
+    top: 285%;
+    left: 50%;
+}
     }
+    
+    
     
 }
 
@@ -713,6 +858,10 @@ body {
         display: flex;
         position: relative;
         justify-content: space-between;
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+        }
         &::after {
             content: "";
             background-color: #E4E4E4;
@@ -724,6 +873,12 @@ body {
         &__title {
             display: flex;
             gap: 1vw;
+        }
+    }
+    &__item {
+        &__link {
+            text-decoration: none;
+            color: #262A3F;
         }
     }
     &__title {
